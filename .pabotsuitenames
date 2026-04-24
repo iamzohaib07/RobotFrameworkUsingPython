@@ -1,0 +1,7 @@
+datasources:879a29ed3eeaf39d562f602570df8efc14582c6e
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:8e29613208666583792d740924b0b4f3c5c8e828
+--suite Suites.Alert
+--suite Suites.Radiobutton
+--suite Suites.Capturescreen
