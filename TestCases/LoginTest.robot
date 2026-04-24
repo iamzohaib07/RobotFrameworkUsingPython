@@ -10,6 +10,7 @@ ${password}     demo123
 
 *** Test Cases ***
 Login Application
+    [Tags]    regression
     Open my browser     ${app_url}      ${app_browser}
     Enter Email     ${email}
     Enter Password      ${password}

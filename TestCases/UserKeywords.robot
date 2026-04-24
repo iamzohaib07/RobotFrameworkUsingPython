@@ -8,6 +8,7 @@ ${browser}  chrome
 
 *** Test Cases ***
 TC1
+    [Tags]    regression
     ${PageTitle}=    launchBrowser   ${url}      ${browser}
     log to console      ${PageTitle}
     log     ${PageTitle}

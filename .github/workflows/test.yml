@@ -31,7 +31,7 @@ jobs:
 
     - name: Run Robot Tests (Headless)
       run: |
-        robot --variable BROWSER:headlesschrome TestCases/
+        robot --include regression --variable BROWSER:headlesschrome TestCases/
 
     - name: Upload Robot Report
       if: always()

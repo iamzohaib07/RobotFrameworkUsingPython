@@ -7,6 +7,7 @@ ${url}  https://artoftesting.com/samplesiteforselenium
 
 *** Test Cases ***
 TestingInputBox
+    [Tags]    regression
     open browser    ${url}    ${browser}
     maximize browser window
 #    set selenium speed      2 seconds

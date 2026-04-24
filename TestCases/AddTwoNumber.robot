@@ -18,6 +18,7 @@
 
 *** Test Cases ***
 Login Test
+    [Tags]    regression
     [Template]    Login With Credentials
     user1    pass1
     user2    pass2

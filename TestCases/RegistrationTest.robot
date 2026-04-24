@@ -8,6 +8,7 @@ ${app_browser}  headLesschrome
 
 *** Test Cases ***
 Registration Test
+    [Tags]    regression
     Open My Browser     ${app_url}      ${app_browser}
     Click Link
     sleep   3

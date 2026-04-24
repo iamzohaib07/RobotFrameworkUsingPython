@@ -8,6 +8,7 @@ ${browser}  chrome
 
 *** Test Cases ***
 Login To Facebook
+    [Tags]    regression
     open my browser     ${url}   ${browser}
     Enter Email     abc@gmail.com
     Enter Password      abc@123
