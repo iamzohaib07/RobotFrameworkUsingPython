@@ -1,0 +1,38 @@
+name: Run Robot Framework Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        pip install robotframework
+        pip install robotframework-seleniumlibrary
+        pip install webdriver-manager
+
+    - name: Run Tests
+      run: |
+        robot TestCases/
+
+    - name: Upload Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: robot-report
+        path: |
+          report.html
+          log.html
+          output.xml
