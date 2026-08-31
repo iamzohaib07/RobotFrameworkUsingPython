@@ -3,10 +3,12 @@ Library     SeleniumLibrary
 Library    Collections
 
 *** Variables ***
+${url}          https://demo.guru99.com/test/newtours/
+${browser}      chrome
 
 *** Test Cases ***
 GetAllLinks
-    Open Browser    https://demo.guru99.com/test/newtours/      chrome
+    Open Browser    ${url}      ${browser}
     Maximize Browser Window
     Set Selenium Implicit Wait    20s
     ${alllinkcount}=    Get Element Count    xpath://a
