@@ -1,12 +1,18 @@
 *** Settings ***
 Library     SeleniumLibrary
 
+*** Variables ***
+${url1}          https://www.google.com/
+${url2}          https://www.bing.com/
+${browser}      chrome
+
 *** Test Cases ***
 MultipleBrowser
-    Open Browser    https://www.google.com/     chrome
+    [Tags]      sanity
+    Open Browser    ${url1}     ${browser}
     Maximize Browser Window
     Sleep    2s
-    Open Browser    https://www.bing.com/       chrome
+    Open Browser    ${url2}       ${browser}
     Sleep    2s
 
     Switch Browser    1

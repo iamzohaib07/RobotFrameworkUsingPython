@@ -1,9 +1,13 @@
 *** Settings ***
 Library     SeleniumLibrary
 
+*** Variables ***
+${url}          https://testautomationpractice.blogspot.com/
+${browser}      chrome
+
 *** Test Cases ***
 TableValidation
-    Open Browser     https://testautomationpractice.blogspot.com/   chrome
+    Open Browser     ${url}   ${browser}
     Maximize Browser Window
     Scroll Element Into View    xpath=//*[contains(text(),'Dynamic Web Table')]
     Sleep    2s

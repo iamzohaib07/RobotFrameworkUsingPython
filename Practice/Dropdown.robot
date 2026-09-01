@@ -1,9 +1,13 @@
 *** Settings ***
 Library     SeleniumLibrary
 
+*** Variables ***
+${url}          https://artoftesting.com/samplesiteforselenium
+${browser}      chrome
+
 *** Test Cases ***
 DropdownTesting
-    Open Browser    https://artoftesting.com/samplesiteforselenium      chrome
+    Open Browser    ${url}      ${browser}
     Maximize Browser Window
     Set Selenium Speed    2 seconds
     Scroll Element Into View    xpath=//*[text()='Generate Alert Box']

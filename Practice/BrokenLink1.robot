@@ -2,9 +2,13 @@
 Library     SeleniumLibrary
 Library     RequestsLibrary
 
+*** Variables ***
+${url}          http://www.deadlinkcity.com/
+${browser}      chrome
+
 *** Test Cases ***
 BrokenLinkTestCase
-    Open Browser    http://www.deadlinkcity.com/    chrome
+    Open Browser    ${url}    ${browser}
     Maximize Browser Window
     ${links}=    Get WebElements    xpath://a[@href]
 

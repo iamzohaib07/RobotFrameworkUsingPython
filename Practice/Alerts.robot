@@ -1,9 +1,13 @@
 *** Settings ***
 Library     SeleniumLibrary
 
+*** Variables ***
+${url}          https://testautomationpractice.blogspot.com/
+${browser}      chrome
+
 *** Test Cases ***
 AlertTestCases
-    Open Browser    https://testautomationpractice.blogspot.com/    chrome
+    Open Browser    ${url}      ${browser}
     Maximize Browser Window
     ${url}=     Get Location
     Log To Console    ${url}
