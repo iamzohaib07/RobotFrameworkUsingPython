@@ -8,7 +8,7 @@ ${browser}      chrome
 
 *** Test Cases ***
 Check Broken Links
-    [Tags]
+    [Tags]      regression
     Open Browser    ${url}    ${browser}
 
     ${links}=    Get WebElements    xpath=//a[@href]
