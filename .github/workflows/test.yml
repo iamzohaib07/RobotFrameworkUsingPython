@@ -32,8 +32,8 @@ jobs:
 
     - name: Run Robot Tests (Headless)
       run: |
-        robot --exclude sanity --variable BROWSER:headlesschrome Practice/
-#        robot --include regression --variable BROWSER:headlesschrome Practice/
+#        robot --exclude sanity --variable BROWSER:headlesschrome Practice/
+        robot --include regression --variable BROWSER:headlesschrome TestCases/
 
     - name: Upload Robot Report
       if: always()
