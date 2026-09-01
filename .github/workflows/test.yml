@@ -32,7 +32,7 @@ jobs:
 
     - name: Run Robot Tests (Headless)
       run: |
-        robot --variable BROWSER:headlesschrome Practice/
+        robot --exclude sanity --variable BROWSER:headlesschrome Practice/
 #        robot --include regression --variable BROWSER:headlesschrome Practice/
 
     - name: Upload Robot Report

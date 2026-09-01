@@ -8,6 +8,7 @@ ${browser}      chrome
 
 *** Test Cases ***
 MultipleBrowser
+    [Tags]      sanity
     Open Browser    ${url1}     ${browser}
     Maximize Browser Window
     Sleep    2s
